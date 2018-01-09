@@ -4,12 +4,48 @@ body {
   font-family: sans-serif;
 }
 
+#root{
+    padding-bottom: 2em;
+}
+
+form{
+    margin-bottom: 1em;
+}
+
+input{
+    background:none;
+    border:none;
+    border-bottom:3px solid #fff;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 1em;
+    min-width: 6em;
+    margin-bottom: 1em;
+    padding: 10px 10px 10px 0;
+    vertical-align: middle;
+
+}
+
+input[type="button"]:hover {
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+
+
+label{
+    margin-left: -5.5em;
+    font-weight: 700;
+    position: absolute;
+    z-index: -11;
+    font-size: 14px;
+    margin-top: 0.9em;
+}
 
 .container {
     display: grid;
     grid-gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    grid-template-rows: repeat(2, 3em);
+    grid-template-rows: repeat(2, 14.5em);
     position: relative;
 }
 
@@ -17,7 +53,7 @@ body {
   margin-bottom: 0em;
 }
 
-.container h4::after {
+/*.container h4::after {
     content: '';
     display: block;
     width: 0;
@@ -29,14 +65,13 @@ body {
 .container h4:hover::after {
     width: 80%;
 }
-
-
+*/
 
 .container p{
 	position: relative;
 	z-index: 11;
 	background-color: #fff;
-	padding-bottom: 7em;
+	padding-bottom: 1em;
 	font-size: 14px;
 	white-space: pre-line;
 	overflow-wrap: break-word;
