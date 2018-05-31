@@ -48,7 +48,7 @@ const PRODUCTS =
             {
                 "link_name": "Movie Search App (React)",
                 "category" : "PersonalProjects",
-                "website": "https://showmemoviesnow.herokuapp.com/",
+                "website": "http://movie-search-app.surge.sh/",
                 "desc": "Movie search app using The Movie Database API."
             },
       
