@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
 
 
 class ProductRow extends React.Component {
@@ -14,7 +14,7 @@ class ProductRow extends React.Component {
         <h4>{link_name}</h4>
         <div className="description">
         <p>{desc}</p>
-        <a href={website} target="_blank">link</a></div>
+        <a href={website} target="_blank" rel="noopener noreferrer">link</a></div>
       </div>
     );
   }
@@ -25,7 +25,7 @@ class ProductTable extends React.Component {
   render() {
     const filterText = this.props.filterText;
     const rows = [];
-    let lastCategory = null;
+    // let lastCategory = null;
 
     this.props.products.forEach((product) => {
       if (product.category.indexOf(filterText) === -1) {
@@ -38,7 +38,7 @@ class ProductTable extends React.Component {
           key={product.link_name}
         />
       );
-      lastCategory = product.category;
+      // lastCategory = product.category;
     });
 
     return (
