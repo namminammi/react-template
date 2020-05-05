@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const ProductRow = ({ ...props }) => {
   const product = props.product;
@@ -41,53 +41,49 @@ const ProductTable = ({ ...props }) => {
   );
 }
 
-class SearchButtons extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+const SearchButtons = ({ ...props }) => {
+
+  const [value, setValue] = useState(props);
+  const handleFilterTextChange = (e) => {
+    setValue(e.target.value);
+    props.onFilterTextChange(e.target.value);
   }
 
-  handleFilterTextChange(e) {
-    this.props.onFilterTextChange(e.target.value);
-  }
+  return (
 
-  render() {
-    return (
+    <form>
+      <input type="button"
+        placeholder="TeamWorks"
+        value="TeamWorks"
+        onClick={handleFilterTextChange}
+      />
 
-      <form>
-        <input type="button"
-          placeholder="TeamWorks"
-          value="TeamWorks"
-          onClick={this.handleFilterTextChange}
-        />
+      <input type="button"
+        placeholder="PersonalProjects"
+        value="PersonalProjects"
+        onClick={handleFilterTextChange}
+      />
 
-        <input type="button"
-          placeholder="PersonalProjects"
-          value="PersonalProjects"
-          onClick={this.handleFilterTextChange}
-        />
+      <input type="button"
+        placeholder="FrontEndTests"
+        value="FrontEndTests"
+        onClick={handleFilterTextChange}
+      />
 
-        <input type="button"
-          placeholder="FrontEndTests"
-          value="FrontEndTests"
-          onClick={this.handleFilterTextChange}
-        />
+      <input type="button"
+        placeholder="Etc"
+        value="Etc"
+        onClick={handleFilterTextChange}
+      />
 
-        <input type="button"
-          placeholder="Etc"
-          value="Etc"
-          onClick={this.handleFilterTextChange}
-        />
+      <input type="button"
+        placeholder="See All"
+        value=""
+        onClick={handleFilterTextChange}
+      /> <label>See All</label>
 
-        <input type="button"
-          placeholder="See All"
-          value=""
-          onClick={this.handleFilterTextChange}
-        /> <label>See All</label>
-
-      </form>
-    );
-  }
+    </form>
+  );
 }
 
 class FilterableProductTable extends React.Component {
