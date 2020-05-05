@@ -81,7 +81,7 @@ const PRODUCTS =
             "link_name": "News Module",
             "category": "FrontEndTests",
             "website": "http://namminammi.github.io/News_module/news_module_index.html",
-            "desc": "A news module that loads nex and previous page, changing the direction of arrows accordingly."
+            "desc": "A news module that loads next and previous page, changing the direction of arrows accordingly."
         },
         {
             "link_name": "Page Design Translation (SASS)",
