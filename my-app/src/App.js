@@ -1,6 +1,4 @@
 import React from 'react';
-// import { render } from 'react-dom';
-
 
 class ProductRow extends React.Component {
   render() {
@@ -25,7 +23,6 @@ class ProductTable extends React.Component {
   render() {
     const filterText = this.props.filterText;
     const rows = [];
-    // let lastCategory = null;
 
     this.props.products.forEach((product) => {
       if (product.category.indexOf(filterText) === -1) {
@@ -38,7 +35,7 @@ class ProductTable extends React.Component {
           key={product.link_name}
         />
       );
-      // lastCategory = product.category;
+      
     });
 
     return (

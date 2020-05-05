@@ -2,26 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-// import Toggle from './App';
 import registerServiceWorker from './registerServiceWorker';
-
 import FilterableProductTable from './App';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-
-// ReactDOM.render((
-//   <Toggle />
-// ), document.getElementById('root'));
-
-// const PRODUCTS = [
-//   {category: 'SportingGoods', price: '$49.99', stocked: true, name: 'Football'},
-//   {category: 'SportingGoods', price: '$9.99', stocked: true, name: 'Baseball'},
-//   {category: 'SportingGoods', price: '$29.99', stocked: false, name: 'Basketball'},
-//   {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-//   {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-//   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
-// ];
-
 
 const PRODUCTS =
     [
