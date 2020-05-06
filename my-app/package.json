@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "surge": "^0.21.3"
   },
   "scripts": {
     "start": "react-scripts start",
