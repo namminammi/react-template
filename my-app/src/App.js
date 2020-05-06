@@ -45,20 +45,20 @@ const SearchButtons = ({ ...props }) => {
     <form>
       <input
         type="button"
-        placeholder="TeamWorks"
-        value="TeamWorks"
+        placeholder="Team Works"
+        value="Team Works"
         onClick={handleFilterTextChange}
       />
       <input
         type="button"
-        placeholder="PersonalProjects"
-        value="PersonalProjects"
+        placeholder="Personal Projects"
+        value="Personal Projects"
         onClick={handleFilterTextChange}
       />
       <input
         type="button"
-        placeholder="FrontEndTests"
-        value="FrontEndTests"
+        placeholder="Front End Tests"
+        value="Front End Tests"
         onClick={handleFilterTextChange}
       />
       <input
