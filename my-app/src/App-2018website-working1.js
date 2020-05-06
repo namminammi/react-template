@@ -21,7 +21,7 @@ var projects = {
             },
       
             {
-                "link_name": "Novo Surgical (Magento) ",
+                "link_name": "Novo Surgical",
                 "category" : "Team Works",
                 "website": "https://novosurgical.com/",
                 "desc": "Magento-based e-commerce website for an internaltional surgical instrument company."
