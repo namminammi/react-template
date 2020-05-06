@@ -43,6 +43,7 @@ const ProductTable = ({ ...props }) => {
 
 const SearchButtons = ({ ...props }) => {
 
+  // eslint-disable-next-line
   const [value, setValue] = useState(props);
   const handleFilterTextChange = (e) => {
     setValue(e.target.value);
@@ -50,7 +51,7 @@ const SearchButtons = ({ ...props }) => {
   }
 
   return (
-    <form>
+    <form>  
       <input type="button"
         placeholder="TeamWorks"
         value="TeamWorks"
@@ -81,36 +82,24 @@ const SearchButtons = ({ ...props }) => {
   );
 }
 
-class FilterableProductTable extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      filterText: ''
-    };
+const FilterableProductTable =({...props})=> {
 
-    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+  const [filterText, setFilterText]= useState(props);
+  const handleFilterTextChange=(filterText)=>{
+      setFilterText(filterText)
   }
-
-  handleFilterTextChange(filterText) {
-    this.setState({
-      filterText: filterText
-    });
-  }
-
-  render() {
     return (
       <div>
         <SearchButtons
-          filterText={this.state.filterText}
-          onFilterTextChange={this.handleFilterTextChange}
+          filterText={filterText}
+          onFilterTextChange={handleFilterTextChange}
         />
         <ProductTable
-          products={this.props.products}
-          filterText={this.state.filterText}
+          products={props.products}
+          filterText={filterText}
         />
       </div>
-    );
-  }
+    )
 }
 
 
